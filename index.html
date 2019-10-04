@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+    <link href="https://cdn.bootcss.com/font-awesome/5.10.2/css/all.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./bootstrap/js/bootstrap.js"></script>
+    <title>招聘网站前台</title>
+    <style>
+        ul{
+            list-style-type: none;
+            
+        }
+        ul li{
+            display: inline-block;
+        }
+        .top{
+            position: relative;
+        }
+        .right{
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        #search_job{
+            position: relative;
+            height: 100px;
+            padding: 0;
+
+        }
+        #search_job > .image{
+            line-height: 100px;
+        }
+        #search_job > .search{
+            position: absolute;
+            top: 21px;
+            left: 400px;
+            border: 2px solid lightblue;
+            border-radius: 5px;
+            
+        }
+        .search_input{
+            border: none;
+        }
+        .search_type{
+            position: absolute;
+            left: 400px;
+            top: 65px;
+            font-size: 14px;
+            color: #ccc;
+        }
+        #search_job > .post_recruit{
+            position: absolute;
+            right: 100px;
+            top: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper border-bottom">
+        <div class="container">
+            <!-- 头部区域 -->
+            <div class="top">      
+                <!-- 左侧切换城市区域 -->          
+                <div class="search_city row">                   
+                    <label for="switch_city" class="text-info font-weight-bold">北京</label>
+                    <div id="switch_city" class="ml-1"> [切换城市]</div>                    
+                </div>
+                <!-- 右侧区域 -->
+                <div class="right row">
+                    <div class="login">登录 / 注册</div>    
+                    <div class="self_center ml-4">
+                        <a href="javascript:void(0)">个人中心<i class="fa fa-chevron-down"></i></a>
+                    </div>
+                    <div class="business_center ml-4">
+                        <a href="javascript:void(0)">商家中心<i class="fa fa-chevron-down"></i></a>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </div>
+    <!-- 招聘搜索区域 -->
+    <div class="job_search border-bottom">
+        <div id="search_job" class="container">
+            <div class="image">
+                <img src="./images/zhaopin.png" alt="">
+            </div>
+            <!-- 搜索区域 -->
+            <div class="search">
+                <i class="fa fa-search ml-2 text-secondary"></i><input class="search_input" type="text" placeholder="请输入需要搜索的职位"/>
+                <input class="btn bg-info text-white rounded-0" type="button" value="搜索职位">               
+            </div>
+            <ul class="search_type">
+                <li>收银员</li>
+                <li>理货员</li>
+                <li>服务员</li>
+                <li>店员</li>
+                <li>营业员</li>
+            </ul>
+            <!-- 发布招聘 -->
+            <div class="post_recruit">
+                <div class="post_jobs btn">
+                    <form>
+                        <div id="post" class="btn bg-warning"><i class="fa fa-info-circle"></i> 发布职位</div>
+                    </form>
+                </div>   
+            </div>
+        </div>            
+    </div>
+    <!-- 职位区域 -->
+    <div class="job border-bottom">
+        <div class="container">
+            职位：
+        </div>
+    </div>
+        
+</body>
+</html>
